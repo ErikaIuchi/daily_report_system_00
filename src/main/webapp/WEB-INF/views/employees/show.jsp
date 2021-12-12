@@ -18,11 +18,11 @@
             <tbody>
                 <tr>
                     <th>社員番号</th>
-                    <td><c:out value="${employee.code }" /></td>
+                    <td><c:out value="${employee.code}" /></td>
                 </tr>
                 <tr>
                     <th>氏名</th>
-                    <td><c:out value="${employee.name }" /></td>
+                    <td><c:out value="${employee.name}" /></td>
                 </tr>
                 <tr>
                     <th>権限</th>
@@ -33,23 +33,23 @@
                 </tr>
                 <tr>
                     <th>登録日時</th>
-                    <fmt:parseDate value="${employee.createdAt }" pattern="yyyy-MM-dd'T'HH:mm:ss" var="createDay" type="date" />
-                    <td><fmt:formatDate value="${createDay }"pattern="yyyy-MM-dd HH:mm:ss" /></td>
+                    <fmt:parseDate value="${employee.createdAt}" pattern="yyyy-MM-dd'T'HH:mm:ss" var="createDay" type="date" />
+                    <td><fmt:formatDate value="${createDay}"pattern="yyyy-MM-dd HH:mm:ss" /></td>
                 </tr>
                 <tr>
                     <th>更新日時</th>
-                    <fmt:parseDate value="${employee.updatedAt }" pattern="yy-MM-dd'T'HH:mm:ss" var="updateDay" type="date" />
-                    <td><fmt:formatDate value="${updateDay }" pattern="yyyy-MM-dd HH:mm:ss" /></td>
+                    <fmt:parseDate value="${employee.updatedAt}" pattern="yyyy-MM-dd'T'HH:mm:ss" var="updateDay" type="date" />
+                    <td><fmt:formatDate value="${updateDay}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
                 </tr>
             </tbody>
         </table>
 
         <p>
-            <a href="<c:url value='?action=${actEmp }&command=${commEdit }&id=${employee.id }' />">この従業員情報を編集する</a>
+            <a href="<c:url value='?action=${actEmp}&command=${commEdit}&id=${employee.id}' />">この従業員情報を編集する</a>
         </p>
-            <a href="<c:url value='?action=${actEmp }&command=${commIdx }' />">一覧に戻る</a>
-        <p>
 
+        <p>
+            <a href="<c:url value='?action=${actEmp}&command=${commIdx}' />">一覧に戻る</a>
         </p>
     </c:param>
 </c:import>
