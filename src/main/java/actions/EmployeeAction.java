@@ -227,11 +227,9 @@ public class EmployeeAction extends ActionBase {
                 //一覧画面にリダイレクト
                 redirect(ForwardConst.ACT_EMP, ForwardConst.CMD_INDEX);
             }
-
-
         }
-
     }
+
 
 
 
