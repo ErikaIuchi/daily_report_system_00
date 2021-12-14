@@ -117,6 +117,8 @@ public class ReportService extends ServiceBase {
             //更新日時を現在時刻に設定
             LocalDateTime ldt = LocalDateTime.now();
             rv.setUpdatedAt(ldt);
+
+            updateInternal(rv);
         }
 
         //バリデーションで発生したエラーを返却（エラーがなければ０件の空リスト）
@@ -154,9 +156,8 @@ public class ReportService extends ServiceBase {
 
         em.getTransaction().begin();
         Report r = findOneInternal(rv.getId());
-        ReportConverter.copyViewToModel(r,  rv);
+        ReportConverter.copyViewToModel(r, rv);
         em.getTransaction().commit();
-
 
     }
 
